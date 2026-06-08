@@ -22,8 +22,8 @@ from plotting import plot_graph
 
 
 # Checkpoint / runtime
-MODEL_PATH = "/Users/pan00389/umn/generative-pro/gnn/gnn_gen/GNN_label_transformer/reaction_dataset_prediction_transformer_2/model.pt"
-OUT_DIR = "reaction_stochastic_inference_transformer/transformer_decoder_2"
+MODEL_PATH = os.path.abspath(os.path.join("reaction_dataset_prediction_transformer_minimal", "model.pt"))
+OUT_DIR = "reaction_stochastic_inference_transformer/transformer_minimal"
 DEVICE = "cpu"
 SEED = 0
 
