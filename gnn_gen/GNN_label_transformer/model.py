@@ -21,6 +21,7 @@ class ModelConfig:
     edge_hidden: int = 64
     self_eps: float = 1.0
     molecule_balanced_pool: bool = True
+    edge_decoder_input_mode: str = "legacy"  # "legacy" or "transformer_minimal"
 
     use_branch_feature: bool = True
     branch_feature_mode: str = "scalar"  # "scalar" or "contextual"
@@ -62,6 +63,8 @@ class EdgePredictor(nn.Module):
 
         if cfg.branch_feature_mode not in {"scalar", "contextual"}:
             raise ValueError("branch_feature_mode must be 'scalar' or 'contextual'")
+        if cfg.edge_decoder_input_mode not in {"legacy", "transformer_minimal"}:
+            raise ValueError("edge_decoder_input_mode must be 'legacy' or 'transformer_minimal'")
 
         self.convs = nn.ModuleList()
         for i in range(cfg.layers):
@@ -107,9 +110,11 @@ class EdgePredictor(nn.Module):
                 nn.Linear(cfg.latent_hidden, 2 * cfg.latent_dim),
             )
 
-        in_dim = cfg.hidden * 2 + 1
-        if cfg.molecule_balanced_pool:
-            in_dim += cfg.hidden
+        in_dim = cfg.hidden * 2
+        if cfg.edge_decoder_input_mode == "legacy":
+            in_dim += 1
+            if cfg.molecule_balanced_pool:
+                in_dim += cfg.hidden
 
         if cfg.use_branch_feature:
             if cfg.branch_feature_mode == "scalar":
@@ -491,13 +496,14 @@ class EdgePredictor(nn.Module):
         pair_feat = torch.cat([h_i, h_j], dim=-1) # concatenated node features, shape [E, 2H]
         kl_loss = torch.zeros((), dtype=torch.float32, device=h_i.device)
         z_group = None
-        # Optional molecule-balanced pooled feature by edge group.
-        if self.cfg.molecule_balanced_pool:
-            # Find all atoms within the group that each edge belongs to, compute the mean across each molecule, and then sum them up to obtain a vector representing the entire reactant environment.
-            g_edge = self._edge_group_pooled_feature(x=x, data=data, edge_group=edge_group) # 找到每条边所属 group 里的所有原子，按分子做均值后求和，得到一个代表整个反应物环境的向量
-            pair_feat = torch.cat([pair_feat, g_edge], dim=-1) #concatenate with the pair feature, shape [E, 2H+H]=[E, 3H]
+        if self.cfg.edge_decoder_input_mode == "legacy":
+            # Optional molecule-balanced pooled feature by edge group.
+            if self.cfg.molecule_balanced_pool:
+                # Find all atoms within the group that each edge belongs to, compute the mean across each molecule, and then sum them up to obtain a vector representing the entire reactant environment.
+                g_edge = self._edge_group_pooled_feature(x=x, data=data, edge_group=edge_group) # 找到每条边所属 group 里的所有原子，按分子做均值后求和，得到一个代表整个反应物环境的向量
+                pair_feat = torch.cat([pair_feat, g_edge], dim=-1) #concatenate with the pair feature, shape [E, 2H+H]=[E, 3H]
 
-        pair_feat = torch.cat([pair_feat, data.react_edge.view(-1, 1)], dim=-1)# add the react_edge feature, shape [E, 3H+1]
+            pair_feat = torch.cat([pair_feat, data.react_edge.view(-1, 1)], dim=-1)# add the react_edge feature, shape [E, 3H+1]
 
         if self.cfg.use_branch_feature:
             if self.cfg.branch_feature_mode == "scalar":

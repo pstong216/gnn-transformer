@@ -21,6 +21,7 @@ LAYERS = 3
 EDGE_HIDDEN = 64
 SELF_EPS = 1.0
 MOLECULE_BALANCED_POOL = True
+EDGE_DECODER_INPUT_MODE = "transformer_minimal"  # "legacy" or "transformer_minimal"
 USE_BRANCH_FEATURE = True
 # Branch mode: "scalar" (simple branch index) or "contextual" (reactant-conditioned learned embedding)
 BRANCH_FEATURE_MODE = "contextual"
@@ -129,7 +130,7 @@ INFERENCE_VALENCE_CAP = False
 VALENCE_CAPS = {"H": 1, "O": 2}
 
 # Output
-OUT_DIR = "reaction_dataset_prediction_transformer_2"
+OUT_DIR = "reaction_dataset_prediction_transformer_minimal"
 SAVE_MODEL = True
 MODEL_NAME = "model.pt"
 SAVE_LOSS_HISTORY = True
@@ -201,6 +202,7 @@ def main() -> None:
         edge_hidden=EDGE_HIDDEN,
         self_eps=SELF_EPS,
         molecule_balanced_pool=MOLECULE_BALANCED_POOL,
+        edge_decoder_input_mode=EDGE_DECODER_INPUT_MODE,
         use_branch_feature=use_branch_feature,
         branch_feature_mode=BRANCH_FEATURE_MODE,
         max_branch_slots=MAX_BRANCH_SLOTS,

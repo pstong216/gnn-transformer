@@ -109,3 +109,10 @@ if cfg.use_third_body_feature:
 2. 修改 `forward()`，删除 `g_pool` 和 `react_edge` 的两段拼接
 3. 跑一次训练，对比改前改后的 eval bond accuracy 和 loss 曲线
 4. 确认效果后，在 `ModelConfig` 里将 `molecule_balanced_pool` 标注为 deprecated
+
+## Configuration rollout
+
+为了保留原始行为，实际实现通过 `ModelConfig.edge_decoder_input_mode` 控制：
+
+- `"legacy"`：保留旧的 `[h_i || h_j || g_pool || react_edge || branch || third_body]` 输入
+- `"transformer_minimal"`：启用本计划的精简输入 `[h_i || h_j || branch || third_body]`
