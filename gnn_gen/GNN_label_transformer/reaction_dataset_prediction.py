@@ -38,7 +38,9 @@ TRANSFORMER_DROPOUT = 0.1
 
 # Edge decoder
 DECODER_TYPE = "transformer"  # "mlp" or "transformer"
-DECODER_TRANSFORMER_HEADS = 6
+# Must divide the active edge decoder input dim.
+# transformer_minimal uses 64*2 + 16 + 1 = 145, so 5 heads is valid.
+DECODER_TRANSFORMER_HEADS = 5
 DECODER_TRANSFORMER_LAYERS = 2
 DECODER_TRANSFORMER_DROPOUT = 0.1
 DECODER_MAX_GROUPS = 32
