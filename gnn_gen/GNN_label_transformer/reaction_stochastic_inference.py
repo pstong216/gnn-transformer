@@ -23,13 +23,13 @@ from plotting import plot_graph
 
 # Checkpoint / runtime
 MODEL_PATH = os.path.abspath(os.path.join("reaction_dataset_prediction_transformer_minimal", "model.pt"))
-OUT_DIR = "reaction_stochastic_inference_transformer/transformer_minimal"
+OUT_DIR = "reaction_stochastic_inference_transformer/transformer_minimal_cap_false"
 DEVICE = "cpu"
 SEED = 0
 
 # Initial pool and simulation controls
 INITIAL_POOL: Dict[str, int] = {"H2": 15, "O2": 15}
-NUM_EVENTS = 50
+NUM_EVENTS = 500
 P_BIMOLECULAR = 0.9
 TEMPERATURE = 300.0  # K
 

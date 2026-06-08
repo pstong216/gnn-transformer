@@ -1,0 +1,10 @@
+Reaction 1001 b0/0 x1: abs_error 0.0 | rate_mae 0.0139 | RANDOM[001] k2 :: H2O2 + H <=> H2O + OH || H2 + OH <=> H2O + H
+Reaction 1002 b0/0 x1: abs_error 0.0 | rate_mae 0.0129 | RANDOM[002] k3 :: H2O + O <=> 2 OH || 2 OH (+ M) <=> H2O2 (+ M) || HO2 + OH <=> H2O + O2
+Reaction 1003 b0/0 x1: abs_error 0.0 | rate_mae 0.0130 | RANDOM[003] k4 :: H2O2 + O <=> HO2 + OH || HO2 + H <=> H2O + O || 2 O + M <=> O2 + M || H2O + O <=> 2 OH
+Reaction 1004 b0/0 x1: abs_error 0.0 | rate_mae 0.0132 | RANDOM[004] k4 :: H + O2 <=> OH + O || HO2 + H <=> H2O + O || HO2 + O <=> OH + O2 || H2O2 + O <=> HO2 + OH
+Reaction 1005 b0/0 x1: abs_error 0.0 | rate_mae 0.0107 | RANDOM[005] k4 :: O + OH + M <=> HO2 + M || H + O + M <=> OH + M || H2O2 + H <=> H2O + OH || H2O + O <=> 2 OH
+Reaction 1006 b0/0 x1: abs_error 0.0 | rate_mae 0.0108 | RANDOM[006] k3 :: H + O2 <=> OH + O || H2O2 + O <=> HO2 + OH || H2O2 + OH <=> H2O + HO2
+Reaction 1007 b0/0 x1: abs_error 0.0 | rate_mae 0.0125 | RANDOM[007] k5 :: H + O2 <=> OH + O || HO2 + H <=> H2O + O || 2 O + M <=> O2 + M || HO2 + O <=> OH + O2 || H2O2 + O <=> HO2 + OH
+Reaction 1008 b0/0 x1: abs_error 0.0 | rate_mae 0.0097 | RANDOM[008] k5 :: H + O + M <=> OH + M || HO2 + OH <=> H2O + O2 || 2 OH (+ M) <=> H2O2 (+ M) || H2O2 + H <=> HO2 + H2 || H2O2 + O <=> HO2 + OH
+Reaction 1009 b0/0 x1: abs_error 0.0 | rate_mae 0.0102 | RANDOM[009] k3 :: H + O + M <=> OH + M || H2O2 + O <=> HO2 + OH || HO2 + OH <=> H2O + O2
+Reaction 1010 b0/0 x1: abs_error 0.0 | rate_mae 0.0129 | RANDOM[010] k3 :: H + O2 <=> OH + O || HO2 + O <=> OH + O2 || H2O2 + H <=> HO2 + H2
