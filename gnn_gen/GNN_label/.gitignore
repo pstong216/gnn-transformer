@@ -1,0 +1,7 @@
+*.txt
+*.png
+*.gif
+__pycache__/
+*.pyc
+handoff_bundle_*/
+handoff_bundle_*.tar.gz

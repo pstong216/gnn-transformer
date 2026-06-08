@@ -1,0 +1,9 @@
+candidate_channels 16
+selected_index 3
+selected_probability 0.04774519
+log_k 30.89705669
+no_bond_change 1
+changed_edges 0
+no_change_penalty 1.000000
+rate_type three_body
+template_reaction_id -1

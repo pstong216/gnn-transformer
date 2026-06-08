@@ -1,0 +1,621 @@
+model: /Users/pan00389/umn/generative-pro/gnn/gnn_gen/GNN_label_transformer/reaction_dataset_prediction_transformer/model.pt
+device: cpu
+predict_bond_change: True
+use_latent_branching: False
+pressure: 0.1
+allow_unseen_reactant_channels: True
+channel_selection_mode: sample
+temperature: 300.0
+enforce_known_species_mapping: False
+no_bond_change_log_penalty: 1.0
+save_event_artifacts_every: 5
+save_overall_plots_every: 5
+save_event_local_graphs: False
+print_progress_every: 5
+initial_pool: {'H2': 15, 'O2': 15}
+
+step 001: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9313 channels=10 -> products=['UNK_0001'] pool={'H2': 15, 'O2': 14, 'UNK_0001': 1}
+step 002: ACCEPT reactants=['H2', 'UNK_0001'] third_body=1 branch=0/0 p=0.5881 channels=16 -> products=['H', 'H', 'O', 'O'] pool={'H': 2, 'H2': 14, 'O': 2, 'O2': 14}
+step 003: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.7687 channels=28 -> products=['OH'] pool={'H': 1, 'H2': 14, 'O': 1, 'O2': 14, 'OH': 1}
+step 004: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8887 channels=34 -> products=['H2O'] pool={'H2': 14, 'H2O': 1, 'O': 1, 'O2': 14}
+step 005: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.5180 channels=24 -> products=['O'] pool={'H2': 14, 'H2O': 1, 'O': 1, 'O2': 14}
+step 006: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.5180 channels=24 -> products=['O'] pool={'H2': 14, 'H2O': 1, 'O': 1, 'O2': 14}
+step 007: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2878 channels=24 -> products=['UNK_0002'] pool={'H2': 14, 'H2O': 1, 'O2': 13, 'UNK_0002': 1}
+step 008: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.2514 channels=24 -> products=['O', 'O', 'O'] pool={'H2': 14, 'H2O': 1, 'O': 3, 'O2': 13}
+step 009: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7736 channels=26 -> products=['O2'] pool={'H2': 14, 'H2O': 1, 'O': 1, 'O2': 14}
+step 010: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1674 channels=24 -> products=['UNK_0001'] pool={'H2': 14, 'H2O': 1, 'O': 1, 'O2': 13, 'UNK_0001': 1}
+step 011: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9340 channels=34 -> products=['O', 'O2'] pool={'H2': 14, 'H2O': 1, 'O': 1, 'O2': 14}
+step 012: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.5180 channels=24 -> products=['O'] pool={'H2': 14, 'H2O': 1, 'O': 1, 'O2': 14}
+step 013: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.5180 channels=24 -> products=['O'] pool={'H2': 14, 'H2O': 1, 'O': 1, 'O2': 14}
+step 014: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2878 channels=24 -> products=['UNK_0002'] pool={'H2': 14, 'H2O': 1, 'O2': 13, 'UNK_0002': 1}
+step 015: ACCEPT reactants=['H2', 'UNK_0002'] third_body=1 branch=0/0 p=0.5731 channels=24 -> products=['H', 'H', 'O', 'O', 'O'] pool={'H': 2, 'H2': 13, 'H2O': 1, 'O': 3, 'O2': 13}
+step 016: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.8281 channels=38 -> products=['OH'] pool={'H': 1, 'H2': 13, 'H2O': 1, 'O': 2, 'O2': 13, 'OH': 1}
+step 017: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8322 channels=48 -> products=['H2O'] pool={'H2': 13, 'H2O': 2, 'O': 2, 'O2': 13}
+step 018: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7577 channels=28 -> products=['O2'] pool={'H2': 13, 'H2O': 2, 'O2': 14}
+step 019: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9381 channels=18 -> products=['UNK_0001'] pool={'H2': 13, 'H2O': 2, 'O2': 13, 'UNK_0001': 1}
+step 020: ACCEPT reactants=['H2', 'UNK_0001'] third_body=1 branch=0/0 p=0.5554 channels=26 -> products=['H', 'H', 'O', 'O'] pool={'H': 2, 'H2': 12, 'H2O': 2, 'O': 2, 'O2': 13}
+step 021: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.7764 channels=40 -> products=['OH'] pool={'H': 1, 'H2': 12, 'H2O': 2, 'O': 1, 'O2': 13, 'OH': 1}
+step 022: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8898 channels=48 -> products=['H2O'] pool={'H2': 12, 'H2O': 3, 'O': 1, 'O2': 13}
+step 023: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2771 channels=26 -> products=['UNK_0002'] pool={'H2': 12, 'H2O': 3, 'O2': 12, 'UNK_0002': 1}
+step 024: ACCEPT reactants=['H2', 'UNK_0002'] third_body=1 branch=0/0 p=0.5430 channels=26 -> products=['H', 'H', 'O', 'O', 'O'] pool={'H': 2, 'H2': 11, 'H2O': 3, 'O': 3, 'O2': 12}
+step 025: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.8340 channels=40 -> products=['OH'] pool={'H': 1, 'H2': 11, 'H2O': 3, 'O': 2, 'O2': 12, 'OH': 1}
+step 026: ACCEPT reactants=['H', 'O2'] third_body=1 branch=0/0 p=0.0133 channels=50 -> products=['HO2'] pool={'H2': 11, 'H2O': 3, 'HO2': 1, 'O': 2, 'O2': 11, 'OH': 1}
+step 027: ACCEPT reactants=['HO2', 'OH'] third_body=1 branch=0/0 p=0.0692 channels=50 -> products=['H2O', 'O2'] pool={'H2': 11, 'H2O': 4, 'O': 2, 'O2': 12}
+step 028: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7587 channels=28 -> products=['O2'] pool={'H2': 11, 'H2O': 4, 'O2': 13}
+step 029: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9451 channels=18 -> products=['UNK_0001'] pool={'H2': 11, 'H2O': 4, 'O2': 12, 'UNK_0001': 1}
+step 030: ACCEPT reactants=['H2', 'UNK_0001'] third_body=1 branch=0/0 p=0.5162 channels=26 -> products=['H', 'H', 'O', 'O'] pool={'H': 2, 'H2': 10, 'H2O': 4, 'O': 2, 'O2': 12}
+step 031: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.7843 channels=40 -> products=['OH'] pool={'H': 1, 'H2': 10, 'H2O': 4, 'O': 1, 'O2': 12, 'OH': 1}
+step 032: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8909 channels=48 -> products=['H2O'] pool={'H2': 10, 'H2O': 5, 'O': 1, 'O2': 12}
+step 033: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.5574 channels=26 -> products=['O'] pool={'H2': 10, 'H2O': 5, 'O': 1, 'O2': 12}
+step 034: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2655 channels=26 -> products=['UNK_0002'] pool={'H2': 10, 'H2O': 5, 'O2': 11, 'UNK_0002': 1}
+step 035: ACCEPT reactants=['H2', 'UNK_0002'] third_body=1 branch=0/0 p=0.5057 channels=26 -> products=['H', 'H', 'O', 'O', 'O'] pool={'H': 2, 'H2': 9, 'H2O': 5, 'O': 3, 'O2': 11}
+step 036: ACCEPT reactants=['H'] third_body=1 branch=0/0 p=0.0214 channels=40 -> products=['H'] pool={'H': 2, 'H2': 9, 'H2O': 5, 'O': 3, 'O2': 11}
+step 037: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.8401 channels=40 -> products=['OH'] pool={'H': 1, 'H2': 9, 'H2O': 5, 'O': 2, 'O2': 11, 'OH': 1}
+step 038: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8341 channels=50 -> products=['H2O'] pool={'H2': 9, 'H2O': 6, 'O': 2, 'O2': 11}
+step 039: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7596 channels=28 -> products=['O2'] pool={'H2': 9, 'H2O': 6, 'O2': 12}
+step 040: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9525 channels=18 -> products=['UNK_0001'] pool={'H2': 9, 'H2O': 6, 'O2': 11, 'UNK_0001': 1}
+step 041: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.0098 channels=26 -> products=['UNK_0001'] pool={'H2': 9, 'H2O': 6, 'O2': 10, 'UNK_0001': 2}
+step 042: ACCEPT reactants=['UNK_0001', 'UNK_0001'] third_body=1 branch=0/0 p=0.9413 channels=28 -> products=['UNK_0002', 'O'] pool={'H2': 9, 'H2O': 6, 'O': 1, 'O2': 10, 'UNK_0002': 1}
+step 043: ACCEPT reactants=['O', 'UNK_0002'] third_body=1 branch=0/0 p=0.7522 channels=36 -> products=['O', 'O', 'O', 'O'] pool={'H2': 9, 'H2O': 6, 'O': 4, 'O2': 10}
+step 044: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7797 channels=28 -> products=['O2'] pool={'H2': 9, 'H2O': 6, 'O': 2, 'O2': 11}
+step 045: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7596 channels=28 -> products=['O2'] pool={'H2': 9, 'H2O': 6, 'O2': 12}
+step 046: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9525 channels=18 -> products=['UNK_0001'] pool={'H2': 9, 'H2O': 6, 'O2': 11, 'UNK_0001': 1}
+step 047: ACCEPT reactants=['UNK_0001'] third_body=1 branch=0/0 p=0.4970 channels=26 -> products=['O', 'O'] pool={'H2': 9, 'H2O': 6, 'O': 2, 'O2': 11}
+step 048: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7596 channels=28 -> products=['O2'] pool={'H2': 9, 'H2O': 6, 'O2': 12}
+step 049: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9525 channels=18 -> products=['UNK_0001'] pool={'H2': 9, 'H2O': 6, 'O2': 11, 'UNK_0001': 1}
+step 050: ACCEPT reactants=['H2', 'UNK_0001'] third_body=1 branch=0/0 p=0.4685 channels=26 -> products=['H', 'H', 'O', 'O'] pool={'H': 2, 'H2': 8, 'H2O': 6, 'O': 2, 'O2': 11}
+step 051: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.7923 channels=40 -> products=['OH'] pool={'H': 1, 'H2': 8, 'H2O': 6, 'O': 1, 'O2': 11, 'OH': 1}
+step 052: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8920 channels=48 -> products=['H2O'] pool={'H2': 8, 'H2O': 7, 'O': 1, 'O2': 11}
+step 053: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.5793 channels=26 -> products=['O'] pool={'H2': 8, 'H2O': 7, 'O': 1, 'O2': 11}
+step 054: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.5793 channels=26 -> products=['O'] pool={'H2': 8, 'H2O': 7, 'O': 1, 'O2': 11}
+step 055: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.5793 channels=26 -> products=['O'] pool={'H2': 8, 'H2O': 7, 'O': 1, 'O2': 11}
+step 056: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2529 channels=26 -> products=['UNK_0002'] pool={'H2': 8, 'H2O': 7, 'O2': 10, 'UNK_0002': 1}
+step 057: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.3519 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 8, 'H2O': 7, 'O': 3, 'O2': 10}
+step 058: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7750 channels=28 -> products=['O2'] pool={'H2': 8, 'H2O': 7, 'O': 1, 'O2': 11}
+step 059: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1471 channels=26 -> products=['UNK_0001'] pool={'H2': 8, 'H2O': 7, 'O': 1, 'O2': 10, 'UNK_0001': 1}
+step 060: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9479 channels=36 -> products=['O', 'O2'] pool={'H2': 8, 'H2O': 7, 'O': 1, 'O2': 11}
+step 061: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2529 channels=26 -> products=['UNK_0002'] pool={'H2': 8, 'H2O': 7, 'O2': 10, 'UNK_0002': 1}
+step 062: ACCEPT reactants=['H2', 'UNK_0002'] third_body=1 branch=0/0 p=0.4585 channels=26 -> products=['H', 'H', 'O', 'O', 'O'] pool={'H': 2, 'H2': 7, 'H2O': 7, 'O': 3, 'O2': 10}
+step 063: ACCEPT reactants=['H', 'O2'] third_body=1 branch=0/0 p=0.0722 channels=40 -> products=['HO2'] pool={'H': 1, 'H2': 7, 'H2O': 7, 'HO2': 1, 'O': 3, 'O2': 9}
+step 064: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.5318 channels=52 -> products=['OH'] pool={'H2': 7, 'H2O': 7, 'HO2': 1, 'O': 2, 'O2': 9, 'OH': 1}
+step 065: ACCEPT reactants=['O', 'OH'] third_body=0 branch=0/0 p=0.0927 channels=50 -> products=['HO2'] pool={'H2': 7, 'H2O': 7, 'HO2': 2, 'O': 1, 'O2': 9}
+step 066: ACCEPT reactants=['HO2', 'O'] third_body=1 branch=0/0 p=0.6552 channels=38 -> products=['OH', 'O2'] pool={'H2': 7, 'H2O': 7, 'HO2': 1, 'O2': 10, 'OH': 1}
+step 067: ACCEPT reactants=['HO2', 'OH'] third_body=0 branch=0/0 p=0.6027 channels=36 -> products=['H2O', 'O2'] pool={'H2': 7, 'H2O': 8, 'O2': 11}
+step 068: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9603 channels=18 -> products=['UNK_0001'] pool={'H2': 7, 'H2O': 8, 'O2': 10, 'UNK_0001': 1}
+step 069: ACCEPT reactants=['H2', 'UNK_0001'] third_body=0 branch=0/0 p=0.0171 channels=26 -> products=['H', 'H', 'O2'] pool={'H': 2, 'H2': 6, 'H2O': 8, 'O2': 11}
+step 070: ACCEPT reactants=['H', 'H'] third_body=1 branch=0/0 p=0.2422 channels=28 -> products=['H2'] pool={'H2': 7, 'H2O': 8, 'O2': 11}
+step 071: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9603 channels=18 -> products=['UNK_0001'] pool={'H2': 7, 'H2O': 8, 'O2': 10, 'UNK_0001': 1}
+step 072: ACCEPT reactants=['UNK_0001'] third_body=1 branch=0/0 p=0.5580 channels=26 -> products=['O', 'O'] pool={'H2': 7, 'H2O': 8, 'O': 2, 'O2': 10}
+step 073: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7606 channels=28 -> products=['O2'] pool={'H2': 7, 'H2O': 8, 'O2': 11}
+step 074: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9603 channels=18 -> products=['UNK_0001'] pool={'H2': 7, 'H2O': 8, 'O2': 10, 'UNK_0001': 1}
+step 075: ACCEPT reactants=['UNK_0001'] third_body=1 branch=0/0 p=0.5580 channels=26 -> products=['O', 'O'] pool={'H2': 7, 'H2O': 8, 'O': 2, 'O2': 10}
+step 076: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2033 channels=28 -> products=['O2'] pool={'H2': 7, 'H2O': 8, 'O2': 11}
+step 077: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9603 channels=18 -> products=['UNK_0001'] pool={'H2': 7, 'H2O': 8, 'O2': 10, 'UNK_0001': 1}
+step 078: ACCEPT reactants=['H2', 'UNK_0001'] third_body=1 branch=0/0 p=0.4091 channels=26 -> products=['H', 'H', 'O', 'O'] pool={'H': 2, 'H2': 6, 'H2O': 8, 'O': 2, 'O2': 10}
+step 079: ACCEPT reactants=['H', 'O2'] third_body=1 branch=0/0 p=0.1025 channels=40 -> products=['HO2'] pool={'H': 1, 'H2': 6, 'H2O': 8, 'HO2': 1, 'O': 2, 'O2': 9}
+step 080: ACCEPT reactants=['H', 'O2'] third_body=1 branch=0/0 p=0.0538 channels=52 -> products=['HO2'] pool={'H2': 6, 'H2O': 8, 'HO2': 2, 'O': 2, 'O2': 8}
+step 081: ACCEPT reactants=['HO2', 'O'] third_body=1 branch=0/0 p=0.6529 channels=40 -> products=['OH', 'O2'] pool={'H2': 6, 'H2O': 8, 'HO2': 1, 'O': 1, 'O2': 9, 'OH': 1}
+step 082: ACCEPT reactants=['O', 'OH'] third_body=1 branch=0/0 p=0.3281 channels=48 -> products=['HO2'] pool={'H2': 6, 'H2O': 8, 'HO2': 2, 'O2': 9}
+step 083: ACCEPT reactants=['H2', 'HO2'] third_body=1 branch=0/0 p=0.1443 channels=28 -> products=['H', 'H', 'OH', 'O'] pool={'H': 2, 'H2': 5, 'H2O': 8, 'HO2': 1, 'O': 1, 'O2': 9, 'OH': 1}
+step 084: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8341 channels=66 -> products=['H2O'] pool={'H': 1, 'H2': 5, 'H2O': 9, 'HO2': 1, 'O': 1, 'O2': 9}
+step 085: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.3384 channels=50 -> products=['OH'] pool={'H2': 5, 'H2O': 9, 'HO2': 1, 'O2': 9, 'OH': 1}
+step 086: ACCEPT reactants=['HO2', 'OH'] third_body=0 branch=0/0 p=0.6054 channels=36 -> products=['H2O', 'O2'] pool={'H2': 5, 'H2O': 10, 'O2': 10}
+step 087: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9687 channels=18 -> products=['UNK_0001'] pool={'H2': 5, 'H2O': 10, 'O2': 9, 'UNK_0001': 1}
+step 088: ACCEPT reactants=['H2', 'UNK_0001'] third_body=1 branch=0/0 p=0.3330 channels=26 -> products=['H', 'H', 'O', 'O'] pool={'H': 2, 'H2': 4, 'H2O': 10, 'O': 2, 'O2': 9}
+step 089: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.8088 channels=40 -> products=['OH'] pool={'H': 1, 'H2': 4, 'H2O': 10, 'O': 1, 'O2': 9, 'OH': 1}
+step 090: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8942 channels=48 -> products=['H2O'] pool={'H2': 4, 'H2O': 11, 'O': 1, 'O2': 9}
+step 091: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2244 channels=26 -> products=['UNK_0002'] pool={'H2': 4, 'H2O': 11, 'O2': 8, 'UNK_0002': 1}
+step 092: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.4798 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 4, 'H2O': 11, 'O': 3, 'O2': 8}
+step 093: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7759 channels=28 -> products=['O2'] pool={'H2': 4, 'H2O': 11, 'O': 1, 'O2': 9}
+step 094: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1305 channels=26 -> products=['UNK_0001'] pool={'H2': 4, 'H2O': 11, 'O': 1, 'O2': 8, 'UNK_0001': 1}
+step 095: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9573 channels=36 -> products=['O', 'O2'] pool={'H2': 4, 'H2O': 11, 'O': 1, 'O2': 9}
+step 096: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2244 channels=26 -> products=['UNK_0002'] pool={'H2': 4, 'H2O': 11, 'O2': 8, 'UNK_0002': 1}
+step 097: ACCEPT reactants=['H2', 'UNK_0002'] third_body=1 branch=0/0 p=0.3125 channels=26 -> products=['H', 'H', 'O', 'O', 'O'] pool={'H': 2, 'H2': 3, 'H2O': 11, 'O': 3, 'O2': 8}
+step 098: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.8587 channels=40 -> products=['OH'] pool={'H': 1, 'H2': 3, 'H2O': 11, 'O': 2, 'O2': 8, 'OH': 1}
+step 099: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8369 channels=50 -> products=['H2O'] pool={'H2': 3, 'H2O': 12, 'O': 2, 'O2': 8}
+step 100: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7625 channels=28 -> products=['O2'] pool={'H2': 3, 'H2O': 12, 'O2': 9}
+step 101: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9777 channels=18 -> products=['UNK_0001'] pool={'H2': 3, 'H2O': 12, 'O2': 8, 'UNK_0001': 1}
+step 102: ACCEPT reactants=['H2', 'UNK_0001'] third_body=1 branch=0/0 p=0.2323 channels=26 -> products=['H', 'H', 'O', 'O'] pool={'H': 2, 'H2': 2, 'H2O': 12, 'O': 2, 'O2': 8}
+step 103: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.8174 channels=40 -> products=['OH'] pool={'H': 1, 'H2': 2, 'H2O': 12, 'O': 1, 'O2': 8, 'OH': 1}
+step 104: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8953 channels=48 -> products=['H2O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 105: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 106: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 107: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 108: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.5863 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 109: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7764 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 110: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 111: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 112: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1211 channels=26 -> products=['UNK_0001'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 7, 'UNK_0001': 1}
+step 113: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9621 channels=36 -> products=['O', 'O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 114: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 115: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 116: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.5863 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 117: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7764 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 118: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 119: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 120: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 121: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 122: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 123: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 124: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 125: ACCEPT reactants=['UNK_0002'] third_body=0 branch=0/0 p=0.1240 channels=26 -> products=['O', 'UNK_0001'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 7, 'UNK_0001': 1}
+step 126: ACCEPT reactants=['UNK_0001'] third_body=1 branch=0/0 p=0.0225 channels=36 -> products=['O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 127: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7764 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 128: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 129: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 130: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 131: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 132: ACCEPT reactants=['O2', 'UNK_0002'] third_body=1 branch=0/0 p=0.0730 channels=26 -> products=['UNK_0001', 'UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 6, 'UNK_0001': 1, 'UNK_0002': 1}
+step 133: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.0225 channels=36 -> products=['O', 'O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 6, 'UNK_0001': 1}
+step 134: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.8549 channels=38 -> products=['O', 'O2'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 135: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2075 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 136: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 137: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 138: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 139: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 140: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 141: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 142: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 143: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 144: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 145: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.5863 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 146: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7764 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 147: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1211 channels=26 -> products=['UNK_0001'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 7, 'UNK_0001': 1}
+step 148: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9621 channels=36 -> products=['O', 'O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 149: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 150: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.5863 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 151: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7764 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 152: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 153: ACCEPT reactants=['UNK_0002'] third_body=0 branch=0/0 p=0.1240 channels=26 -> products=['O', 'UNK_0001'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 7, 'UNK_0001': 1}
+step 154: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9621 channels=36 -> products=['O', 'O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 155: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 156: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.5863 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 157: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7764 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 158: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 159: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 160: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 161: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 162: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 163: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 164: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 165: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 166: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 167: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 168: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.5863 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 169: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7764 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 170: ACCEPT reactants=['O'] third_body=0 branch=0/0 p=0.0117 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 171: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1211 channels=26 -> products=['UNK_0001'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 7, 'UNK_0001': 1}
+step 172: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9621 channels=36 -> products=['O', 'O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 173: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 174: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 175: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 176: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 177: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.5863 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 178: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7764 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 179: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 180: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 181: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.5863 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 182: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7764 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 183: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1211 channels=26 -> products=['UNK_0001'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 7, 'UNK_0001': 1}
+step 184: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9621 channels=36 -> products=['O', 'O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 185: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 186: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 187: ACCEPT reactants=['O'] third_body=0 branch=0/0 p=0.0117 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 188: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 189: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 190: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 191: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 192: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 193: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 194: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.5863 channels=26 -> products=['O', 'O', 'O'] pool={'H2': 2, 'H2O': 13, 'O': 3, 'O2': 7}
+step 195: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7764 channels=28 -> products=['O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 196: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 197: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1211 channels=26 -> products=['UNK_0001'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 7, 'UNK_0001': 1}
+step 198: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9621 channels=36 -> products=['O', 'O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 199: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 200: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 201: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 202: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 203: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 204: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 205: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 206: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 207: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1211 channels=26 -> products=['UNK_0001'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 7, 'UNK_0001': 1}
+step 208: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9621 channels=36 -> products=['O', 'O2'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 209: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 210: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 211: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6558 channels=26 -> products=['O'] pool={'H2': 2, 'H2O': 13, 'O': 1, 'O2': 8}
+step 212: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.2082 channels=26 -> products=['UNK_0002'] pool={'H2': 2, 'H2O': 13, 'O2': 7, 'UNK_0002': 1}
+step 213: ACCEPT reactants=['H2', 'UNK_0002'] third_body=1 branch=0/0 p=0.1910 channels=26 -> products=['H', 'H', 'O', 'O', 'O'] pool={'H': 2, 'H2': 1, 'H2O': 13, 'O': 3, 'O2': 7}
+step 214: ACCEPT reactants=['H', 'O'] third_body=1 branch=0/0 p=0.8651 channels=38 -> products=['OH'] pool={'H': 1, 'H2': 1, 'H2O': 13, 'O': 2, 'O2': 7, 'OH': 1}
+step 215: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8379 channels=48 -> products=['H2O'] pool={'H2': 1, 'H2O': 14, 'O': 2, 'O2': 7}
+step 216: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.0065 channels=26 -> products=['UNK_0002'] pool={'H2': 1, 'H2O': 14, 'O': 1, 'O2': 6, 'UNK_0002': 1}
+step 217: ACCEPT reactants=['O', 'UNK_0002'] third_body=1 branch=0/0 p=0.7713 channels=34 -> products=['O', 'O', 'O', 'O'] pool={'H2': 1, 'H2O': 14, 'O': 4, 'O2': 6}
+step 218: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2087 channels=26 -> products=['O2'] pool={'H2': 1, 'H2O': 14, 'O': 2, 'O2': 7}
+step 219: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7635 channels=26 -> products=['O2'] pool={'H2': 1, 'H2O': 14, 'O2': 8}
+step 220: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9878 channels=16 -> products=['UNK_0001'] pool={'H2': 1, 'H2O': 14, 'O2': 7, 'UNK_0001': 1}
+step 221: ACCEPT reactants=['UNK_0001'] third_body=1 branch=0/0 p=0.8826 channels=24 -> products=['O', 'O'] pool={'H2': 1, 'H2O': 14, 'O': 2, 'O2': 7}
+step 222: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7635 channels=26 -> products=['O2'] pool={'H2': 1, 'H2O': 14, 'O2': 8}
+step 223: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.9878 channels=16 -> products=['UNK_0001'] pool={'H2': 1, 'H2O': 14, 'O2': 7, 'UNK_0001': 1}
+step 224: ACCEPT reactants=['UNK_0001'] third_body=1 branch=0/0 p=0.8826 channels=24 -> products=['O', 'O'] pool={'H2': 1, 'H2O': 14, 'O': 2, 'O2': 7}
+step 225: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7635 channels=26 -> products=['O2'] pool={'H2': 1, 'H2O': 14, 'O2': 8}
+step 226: ACCEPT reactants=['H2'] third_body=1 branch=0/0 p=0.0037 channels=16 -> products=['H', 'H'] pool={'H': 2, 'H2O': 14, 'O2': 8}
+step 227: ACCEPT reactants=['H', 'O2'] third_body=1 branch=0/0 p=0.5166 channels=18 -> products=['HO2'] pool={'H': 1, 'H2O': 14, 'HO2': 1, 'O2': 7}
+step 228: ACCEPT reactants=['H', 'HO2'] third_body=1 branch=0/0 p=0.6905 channels=26 -> products=['H', 'OH', 'O'] pool={'H': 1, 'H2O': 14, 'O': 1, 'O2': 7, 'OH': 1}
+step 229: ACCEPT reactants=['H', 'OH'] third_body=1 branch=0/0 p=0.8964 channels=34 -> products=['H2O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 230: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 231: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 232: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 233: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 234: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 235: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 236: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 237: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 238: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 239: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 240: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 241: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 242: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 243: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 244: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 245: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 246: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 247: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 248: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 249: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 250: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 251: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 252: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 253: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 254: ACCEPT reactants=['O2', 'UNK_0002'] third_body=1 branch=0/0 p=0.0804 channels=16 -> products=['UNK_0001', 'UNK_0002'] pool={'H2O': 15, 'O2': 5, 'UNK_0001': 1, 'UNK_0002': 1}
+step 255: ACCEPT reactants=['UNK_0001', 'UNK_0002'] third_body=1 branch=0/0 p=0.9492 channels=24 -> products=['O2', 'O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 256: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 257: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 258: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 259: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 260: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 261: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 262: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 263: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 264: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 265: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 266: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 267: ACCEPT reactants=['O'] third_body=0 branch=0/0 p=0.0122 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 268: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 269: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 270: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 271: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 272: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 273: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 274: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 275: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 276: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 277: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 278: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 279: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 280: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 281: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 282: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 283: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 284: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 285: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 286: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 287: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 288: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 289: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 290: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 291: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 292: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 293: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 294: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 295: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 296: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 297: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 298: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 299: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 300: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 301: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 302: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 303: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 304: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 305: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 306: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 307: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 308: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 309: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 310: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 311: ACCEPT reactants=['O'] third_body=0 branch=0/0 p=0.0122 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 312: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 313: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 314: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 315: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 316: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 317: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 318: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 319: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 320: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 321: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 322: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 323: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 324: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 325: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 326: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 327: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 328: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 329: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 330: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 331: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 332: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 333: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 334: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 335: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 336: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 337: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 338: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 339: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 340: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 341: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 342: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 343: ACCEPT reactants=['O2', 'UNK_0002'] third_body=1 branch=0/0 p=0.0804 channels=16 -> products=['UNK_0001', 'UNK_0002'] pool={'H2O': 15, 'O2': 5, 'UNK_0001': 1, 'UNK_0002': 1}
+step 344: ACCEPT reactants=['UNK_0001', 'UNK_0002'] third_body=1 branch=0/0 p=0.9492 channels=24 -> products=['O2', 'O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 345: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 346: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 347: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 348: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 349: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 350: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 351: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 352: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 353: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 354: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 355: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 356: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 357: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 358: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 359: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 360: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 361: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 362: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 363: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 364: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 365: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 366: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 367: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 368: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 369: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 370: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 371: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 372: ACCEPT reactants=['UNK_0002'] third_body=0 branch=0/0 p=0.1594 channels=16 -> products=['O', 'UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 373: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 374: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 375: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 376: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 377: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 378: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 379: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 380: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 381: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 382: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 383: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 384: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 385: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 386: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 387: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 388: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 389: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 390: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 391: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 392: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 393: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 394: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 395: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 396: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 397: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 398: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 399: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 400: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 401: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 402: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 403: ACCEPT reactants=['O'] third_body=0 branch=0/0 p=0.0122 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 404: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 405: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 406: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 407: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 408: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 409: ACCEPT reactants=['O2', 'UNK_0002'] third_body=1 branch=0/0 p=0.0804 channels=16 -> products=['UNK_0001', 'UNK_0002'] pool={'H2O': 15, 'O2': 5, 'UNK_0001': 1, 'UNK_0002': 1}
+step 410: ACCEPT reactants=['UNK_0001', 'UNK_0002'] third_body=1 branch=0/0 p=0.9492 channels=24 -> products=['O2', 'O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 411: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 412: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 413: ACCEPT reactants=['UNK_0002'] third_body=0 branch=0/0 p=0.1594 channels=16 -> products=['O', 'UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 414: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 415: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 416: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 417: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 418: ACCEPT reactants=['UNK_0002'] third_body=0 branch=0/0 p=0.1594 channels=16 -> products=['O', 'UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 419: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 420: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 421: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 422: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 423: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 424: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 425: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 426: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 427: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 428: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 429: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 430: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 431: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 432: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 433: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 434: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 435: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 436: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 437: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 438: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 439: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 440: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 441: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 442: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 443: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 444: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 445: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 446: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 447: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 448: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 449: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 450: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 451: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 452: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 453: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 454: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 455: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 456: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 457: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 458: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 459: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 460: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 461: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 462: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 463: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 464: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 465: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 466: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 467: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 468: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 469: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 470: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 471: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 472: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 473: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 474: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 475: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 476: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 477: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 478: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 479: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 480: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 481: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 482: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 483: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 484: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 485: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 486: ACCEPT reactants=['O2', 'UNK_0002'] third_body=1 branch=0/0 p=0.0804 channels=16 -> products=['UNK_0001', 'UNK_0002'] pool={'H2O': 15, 'O2': 5, 'UNK_0001': 1, 'UNK_0002': 1}
+step 487: ACCEPT reactants=['UNK_0001', 'UNK_0002'] third_body=1 branch=0/0 p=0.9492 channels=24 -> products=['O2', 'O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 488: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 489: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 490: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 491: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 492: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 493: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 494: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 495: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 496: ACCEPT reactants=['O2', 'UNK_0002'] third_body=1 branch=0/0 p=0.0804 channels=16 -> products=['UNK_0001', 'UNK_0002'] pool={'H2O': 15, 'O2': 5, 'UNK_0001': 1, 'UNK_0002': 1}
+step 497: ACCEPT reactants=['UNK_0001', 'UNK_0002'] third_body=1 branch=0/0 p=0.9492 channels=24 -> products=['O2', 'O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 498: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 499: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 500: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 501: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 502: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 503: ACCEPT reactants=['O'] third_body=0 branch=0/0 p=0.0122 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 504: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 505: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 506: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 507: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 508: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 509: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 510: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 511: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 512: ACCEPT reactants=['UNK_0002'] third_body=0 branch=0/0 p=0.1594 channels=16 -> products=['O', 'UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 513: ACCEPT reactants=['UNK_0001'] third_body=1 branch=0/0 p=0.0226 channels=24 -> products=['O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 514: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 515: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 516: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 517: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 518: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 519: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 520: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 521: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 522: ACCEPT reactants=['UNK_0002'] third_body=0 branch=0/0 p=0.1594 channels=16 -> products=['O', 'UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 523: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 524: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 525: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 526: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 527: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 528: ACCEPT reactants=['O2', 'UNK_0002'] third_body=1 branch=0/0 p=0.0804 channels=16 -> products=['UNK_0001', 'UNK_0002'] pool={'H2O': 15, 'O2': 5, 'UNK_0001': 1, 'UNK_0002': 1}
+step 529: ACCEPT reactants=['UNK_0001', 'UNK_0002'] third_body=1 branch=0/0 p=0.9492 channels=24 -> products=['O2', 'O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 530: ACCEPT reactants=['O', 'O'] third_body=0 branch=0/0 p=0.2076 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 531: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 532: ACCEPT reactants=['UNK_0002'] third_body=0 branch=0/0 p=0.1594 channels=16 -> products=['O', 'UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 533: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 534: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 535: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 536: ACCEPT reactants=['O2', 'UNK_0002'] third_body=1 branch=0/0 p=0.0804 channels=16 -> products=['UNK_0001', 'UNK_0002'] pool={'H2O': 15, 'O2': 5, 'UNK_0001': 1, 'UNK_0002': 1}
+step 537: ACCEPT reactants=['UNK_0001', 'UNK_0002'] third_body=1 branch=0/0 p=0.9492 channels=24 -> products=['O2', 'O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 538: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 539: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 540: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 541: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 542: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 543: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 544: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 545: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 546: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 547: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 548: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 549: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 550: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 551: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 552: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 553: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 554: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 555: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 556: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 557: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 558: ACCEPT reactants=['UNK_0002'] third_body=0 branch=0/0 p=0.1594 channels=16 -> products=['O', 'UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 559: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 560: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 561: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 562: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 563: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 564: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 565: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 566: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 567: ACCEPT reactants=['UNK_0002'] third_body=1 branch=0/0 p=0.7536 channels=16 -> products=['O', 'O', 'O'] pool={'H2O': 15, 'O': 3, 'O2': 6}
+step 568: ACCEPT reactants=['O', 'O'] third_body=1 branch=0/0 p=0.7768 channels=18 -> products=['O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 569: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 570: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 571: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 572: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 573: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 574: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 575: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 576: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 577: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 578: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+step 579: ACCEPT reactants=['UNK_0002'] third_body=0 branch=0/0 p=0.1594 channels=16 -> products=['O', 'UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 580: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 581: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 582: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 583: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 584: ACCEPT reactants=['O'] third_body=0 branch=0/0 p=0.0122 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 585: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 586: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 587: ACCEPT reactants=['O'] third_body=0 branch=0/0 p=0.0122 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 588: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 589: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 590: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 591: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 592: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 593: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 594: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 595: ACCEPT reactants=['O'] third_body=1 branch=0/0 p=0.6858 channels=16 -> products=['O'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 596: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 597: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 598: ACCEPT reactants=['O2'] third_body=1 branch=0/0 p=0.1108 channels=16 -> products=['UNK_0001'] pool={'H2O': 15, 'O': 1, 'O2': 6, 'UNK_0001': 1}
+step 599: ACCEPT reactants=['O', 'UNK_0001'] third_body=1 branch=0/0 p=0.9670 channels=24 -> products=['O', 'O2'] pool={'H2O': 15, 'O': 1, 'O2': 7}
+step 600: ACCEPT reactants=['O', 'O2'] third_body=1 branch=0/0 p=0.1905 channels=16 -> products=['UNK_0002'] pool={'H2O': 15, 'O2': 6, 'UNK_0002': 1}
+
+accepted_events: 600
+rejected_events: 0
+registered_unknown_species: 2
+final_pool: {'H2O': 15, 'O2': 6, 'UNK_0002': 1}
